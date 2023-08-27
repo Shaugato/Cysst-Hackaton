@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Connect</title>
+<link rel="stylesheet" href="landingpage.css">
+<style>
+  #extended-about {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  #extended-about p {
+    margin: 10px 0;
+  }
+  .read-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var readMoreLink = document.getElementById("read-more-link");
+
+    readMoreLink.addEventListener("click", function() {
+      var extendedAbout = document.getElementById("extended-about");
+
+      if (extendedAbout.style.display === "none" || extendedAbout.style.display === "") {
+        extendedAbout.style.display = "block";
+        readMoreLink.innerHTML = "Read less";
+      } else {
+        extendedAbout.style.display = "none";
+        readMoreLink.innerHTML = "Read more";
+      }
+    });
+  });
+</script>
+
+</head>
+<body>
+  <header>
+    <h1>Welcome to Research Connect</h1>
+    <p>Connecting Researchers and Participants for Meaningful Collaboration</p>
+    <a href="#login" class="cta-button">Get Started</a>
+  </header>
+  
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We bridge research and collaboration...</p>
+    <div id="extended-about">
+      <p><strong>Welcome to ResearchConnect – Your Bridge to Collaborative Discovery!</strong></p>
+      <p>We believe great research thrives on diversity and collaboration. Our platform connects researchers with participants, facilitating groundbreaking studies. Whether you're a scientist expanding knowledge or an enthusiast making an impact, ResearchConnect opens doors.</p>
+      <p><strong>Our Mission</strong></p>
+      <p>We simplify research involvement...</p>
+      <p>We strive to make research accessible and rewarding. Our platform addresses researchers' challenges in finding participants and taps into individuals' enthusiasm for groundbreaking projects. We're here to foster connections that drive innovation.</p>
+      <p><strong>What We Offer</strong></p>
+      <p><strong>For Researchers:</strong> Efficient participant discovery...</p>
+      <p>We provide a streamlined approach to connect researchers with participants. ResearchConnect lets you focus on advancing knowledge and making an impact by finding the right contributors.</p>
+      <p><strong>For Participants:</strong> Empower your impact...</p>
+      <p>ResearchConnect offers a platform for seasoned experts and newcomers alike. Shape the future, gain insights, and collaborate with leading researchers to make a difference.</p>
+      <p><strong>Why Choose ResearchConnect?</strong></p>
+      <p><strong>Efficiency:</strong> Swift participant matching...</p>
+      <p>Say goodbye to tedious participant searches. Our advanced algorithms match researchers and participants based on compatibility and interests.</p>
+      <p><strong>Diversity:</strong> Embrace varied perspectives...</p>
+      <p>Celebrating diversity, we connect researchers and participants from various backgrounds, enriching the pool of experiences and insights.</p>
+      <p><strong>Impact:</strong> Catalyze change...</p>
+      <p>Your involvement in research drives life-changing discoveries and reshapes industries. ResearchConnect empowers your meaningful impact.</p>
+      <p><strong>Join Us in Shaping the Future</strong></p>
+      <p>Collaborate for a brighter tomorrow...</p>
+      <p>Whether you're a visionary researcher or an eager contributor, ResearchConnect is your hub for connection, collaboration, and change. Join our vibrant community dedicated to knowledge advancement and boundary pushing.</p>
+      <p><em>Discover, connect, and collaborate with ResearchConnect today!</em></p>
+    </div>
+    <a href="javascript:void(0);" id="read-more-link" onclick="toggleExtendedAbout()">Read more</a>
+  </section>
+  
+  <section id="login">
+    <h2>Login to Research Connect</h2>
+    <form action="homepage.html">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit" class="cta-button">Login</button>
+    </form>
+    <p>Not registered yet? <a href="registration.html">Click here</a> to sign up.</p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Research Connect. All rights reserved.</p>
+  </footer>
+</body>
+</html>

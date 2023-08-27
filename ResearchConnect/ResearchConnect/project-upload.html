@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Research Project</title>
+<link rel="stylesheet" href="project-upload.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="#" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <a href="homepage.html" class="home-link">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </nav>
+    <h1>Upload Research Project</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </header>
+  
+  <section id="project-form">
+    <form action="upload-project.php" method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="study-purpose">Study Purpose:</label>
+      <textarea id="study-purpose" name="studyPurpose" rows="4" required></textarea>
+
+      <label for="involved">What's Involved:</label>
+      <textarea id="involved" name="whatsInvolved" rows="4" required></textarea>
+      
+      <label for="criteria">Recruitment Criteria:</label>
+      <textarea id="criteria" name="recruitmentCriteria" rows="4" required></textarea>
+      
+      <label for="age-category">Age Category:</label>
+      <input type="text" id="age-category" name="ageCategory" required>
+      
+      <label for="benefits">Benefits:</label>
+      <textarea id="benefits" name="benefits" rows="4" required></textarea>
+      
+      <label for="contacts">Research Team Contacts:</label>
+      <textarea id="contacts" name="researchTeamContacts" rows="4" required></textarea>
+      
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+      
+      <label for="gift-voucher">Gift Voucher:</label>
+      <input type="text" id="gift-voucher" name="giftVoucher" required>
+      
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" required>
+      
+      <button type="submit">Upload Project</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Research Connect. All rights reserved.</p>
+  </footer>
+</body>
+</html>

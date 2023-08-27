@@ -1,0 +1,138 @@
+/* Your existing CSS styles here */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+
+header {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+#profile-form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Additional styling for specific elements */
+
+#gender,
+#university {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#gender:focus,
+#university:focus {
+  outline: none;
+}
+
+select[multiple] option:checked {
+  background-color: #007BFF;
+  color: white;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.checkbox-group.interests-group1 {
+  float: left;
+}
+
+.checkbox-group.interests-group2 {
+  float: right;
+}
+
+.checkbox-group.hobbies-group1 {
+  float: left;
+}
+
+.checkbox-group.hobbies-group2 {
+  float: right;
+}
+
+.back-link{
+  position:absolute;
+  top:10px;
+  left:10px;
+}
+.home-link{
+  position:absolute;
+  top:60px;
+  left:551px;
+}

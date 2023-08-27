@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Setup</title>
+<link rel="stylesheet" href="profile.css">
+<script src="profile.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+      <a href="#" class="home-link">
+        <i class="fas fa-home"></i> Home
+      </a>
+    </nav>
+    <h1>Profile Setup</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  </header>
+  
+  <section id="profile-form">
+    <form action="update-profile.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="profile-picture">Profile Picture:</label>
+      <input type="file" id="profile-picture" name="profilePicture">
+
+      <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <label for="date-of-birth">Date of Birth:</label>
+    <input type="date" id="date-of-birth" name="dateOfBirth">
+      
+    <!-- Replace the interests and hobbies sections with the following code -->
+ <br><br>  
+<label>Interests :</label>
+<div class="checkbox-group interests-group1">
+  <label><input type="checkbox" name="interests[]" value="technology" > Technology and Innovation</label>
+<label><input type="checkbox" name="interests[]" value="travel" > Travel and Adventure</label>
+<label><input type="checkbox" name="interests[]" value="health" > Health and Wellness</label>
+<label><input type="checkbox" name="interests[]" value="arts" > Arts and Culture</label>
+<label><input type="checkbox" name="interests[]" value="science" > Science and Discovery</label>
+</div>
+<div class="checkbox-group interests-group2">
+  <label><input type="checkbox" name="interests[]" value="food" > Food and Cooking</label>
+  <label><input type="checkbox" name="interests[]" value="environment" > Environment and Sustainability</label>
+  <label><input type="checkbox" name="interests[]" value="development" > Personal Development</label>
+  <label><input type="checkbox" name="interests[]" value="fashion" > Fashion and Style</label>
+  <label><input type="checkbox" name="interests[]" value="sports" > Sports and Recreation</label>
+  </div>
+
+
+<label>Hobbies :</label>
+<div class="checkbox-group hobbies-group1">
+<label><input type="checkbox" name="hobbies[]" value="reading"> Reading</label>
+<label><input type="checkbox" name="hobbies[]" value="traveling"> Traveling</label>
+<label><input type="checkbox" name="hobbies[]" value="painting"> Painting</label>
+<label><input type="checkbox" name="hobbies[]" value="photography"> Photography</label>
+<label><input type="checkbox" name="hobbies[]" value="cooking"> Cooking</label>
+</div>
+<div class="checkbox-group hobbies-group2">
+    <label><input type="checkbox" name="hobbies[]" value="gardening"> Gardening</label>
+<label><input type="checkbox" name="hobbies[]" value="playing_instrument"> Playing an Instrument</label>
+<label><input type="checkbox" name="hobbies[]" value="fitness"> Fitness</label>
+<label><input type="checkbox" name="hobbies[]" value="crafting"> Crafting</label>
+<label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+  </div>   
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+      
+      <label for="university">University:</label>
+    <select id="university" name="university">
+        <option value="ANU">Australian National University (ANU)</option>
+        <option value="Sydney">University of Sydney</option>
+        <option value="Melbourne">University of Melbourne</option>
+        <option value="Queensland">University of Queensland</option>
+        <option value="UNSW">University of New South Wales (UNSW Sydney)</option>
+        <option value="UWA">University of Western Australia (UWA)</option>
+        <option value="Monash">Monash University</option>
+        <option value="Adelaide">University of Adelaide</option>
+        <option value="UTS">University of Technology Sydney (UTS)</option>
+        <option value="Wollongong">University of Wollongong</option>
+        <option value="Griffith">Griffith University</option>
+        <option value="Macquarie">Macquarie University</option>
+        <option value="Newcastle">University of Newcastle</option>
+        <option value="QUT">Queensland University of Technology (QUT)</option>
+        <option value="Curtin">Curtin University</option>
+        <option value="RMIT">RMIT University</option>
+        <option value="LaTrobe">La Trobe University</option>
+        <option value="Deakin">Deakin University</option>
+        <option value="UniSA">University of South Australia (UniSA)</option>
+        <option value="Flinders">Flinders University</option>
+        <option value="Swinburne">Swinburne University of Technology</option>
+        <option value="Tasmania">University of Tasmania</option>
+        <option value="JCU">James Cook University</option>
+        <option value="WSU">Western Sydney University</option>
+        <option value="CharlesSturt">Charles Sturt University</option>
+    </select>
+      
+      <label for="course">Course:</label>
+      <input type="text" id="course" name="course">
+      
+      <label for="social-media">Social Media Links:</label>
+      <input type="text" id="social-media" name="socialMedia">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+      
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Research Connect. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<title>User Registration</title>
+
+<link rel="stylesheet" href="registration.css">
+<!-- <style>
+  /* Your CSS code here */
+  .back-button {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    padding: 3px;
+    border-radius: 2.5px;
+    background-color: #ccc;
+    color: black;
+    text-decoration: double;
+  }
+
+  .back-button:hover {
+    background-color: #333;
+    color: white;
+  }
+</style> -->
+<script>
+  function validateForm() {
+    var firstName = document.forms["registrationForm"]["firstName"].value;
+    var lastName = document.forms["registrationForm"]["lastName"].value;
+    var email = document.forms["registrationForm"]["email"].value;
+    var password = document.forms["registrationForm"]["password"].value;
+    var confirmPassword = document.forms["registrationForm"]["confirmPassword"].value;
+    
+    if (firstName === "" || lastName === "" || email === "" || password === "") {
+      alert("All fields must be filled out");
+      return false;
+    }
+    if (!validateEmail(email)) {
+      alert("Invalid email format");
+      return false;
+    }
+    
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return false;
+    }
+    
+    if (!validatePasswordStrength(password)) {
+      alert("Password must be at least 8 characters long and contain a mix of letters, numbers, and special characters");
+      return false;
+    }
+    
+    // Additional checks or processing if needed
+    
+    return true;
+  }
+   
+  function showConfirmPassword() {
+    var confirmPasswordInput = document.querySelector('[name="confirmPassword"]');
+    if (!confirmPasswordInput) {
+      var passwordInput = document.getElementById("password");
+      var confirmPasswordLabel = document.createElement("label");
+      confirmPasswordLabel.innerHTML = "Confirm Password:";
+      confirmPasswordInput = document.createElement("input");
+      confirmPasswordInput.type = "password";
+      confirmPasswordInput.name = "confirmPassword";
+      confirmPasswordInput.required = true;
+
+      passwordInput.insertAdjacentElement("afterend", confirmPasswordLabel);
+      confirmPasswordLabel.insertAdjacentElement("afterend", confirmPasswordInput);
+    }
+  }
+
+  function validateEmail(email) {
+    // Basic email format validation using regular expression
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+  
+  function validatePasswordStrength(password) {
+    // Password strength validation: at least 8 characters, letters, numbers, and special characters
+    var passwordPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    var validPassword = passwordPattern.test(password);
+    
+    if (!validPassword) {
+      document.getElementById("passwordStrengthMessage").style.display = "block";
+    } else {
+      document.getElementById("passwordStrengthMessage").style.display = "none";
+    }
+    
+    return validPassword;
+  }
+</script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="landingpage.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+      <a href="landingpage.html" class="home-link">
+        <i class="fas fa-home"></i> Home
+      </a>
+    </nav>
+    <h1>User Registration</h1>
+  </header>
+  
+  <section id="registration-form">
+    <h2>Register a New User</h2>
+    <form name="registrationForm" action="homepage.html" >
+      <label for="firstName">First Name:</label>
+      <input type="text" name="firstName" required>
+      
+      <label for="lastName">Last Name:</label>
+      <input type="text" name="lastName" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" onchange="showConfirmPassword()" required>
+      <p id="passwordStrengthMessage" style="display: none; color: red;">Password must be at least 8 characters long and contain a mix of letters, numbers, and special characters</p>
+      
+      <button type="submit">Register</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 User Registration. All rights reserved.</p>
+  </footer>
+</body>
+</html>

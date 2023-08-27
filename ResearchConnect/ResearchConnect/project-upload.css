@@ -1,0 +1,73 @@
+/* Your CSS styling here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+h1 {
+  margin: 0;
+}
+
+#project-form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+.back-link{
+    position:absolute;
+    top:10px;
+    left:10px;
+  }
+  .home-link{
+    position:absolute;
+    top:60px;
+    left:461px;
+  }
